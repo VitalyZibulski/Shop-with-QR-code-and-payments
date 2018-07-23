@@ -29,3 +29,7 @@ Route::resource('qrcodes', 'QrcodeController');
 Route::resource('roles', 'RoleController');
 
 Route::resource('transactions', 'TransactionController');
+
+Route::resource('users', 'UserController');
+
+Route::resource('users', 'UserController');
