@@ -1,25 +1,21 @@
-<!-- Id Field -->
+<!-- Qrcode Id Field -->
 <div class="form-group">
-    {!! Form::label('id', 'Id:') !!}
-    <p>{!! $transaction->id !!}</p>
+    {!! Form::label('qrcode_id', 'Product Name:') !!}
+    <p><a href="/qrcodes/{!! $transaction->qrcode['id'] !!}">
+            <b>{!! $transaction->qrcode['product_name'] !!}</b>
+        </a>
+    </p>
 </div>
-
 <!-- User Id Field -->
 <div class="form-group">
-    {!! Form::label('user_id', 'User Id:') !!}
+    {!! Form::label('user_id', 'Buyer Name:') !!}
     <p>{!! $transaction->user_id !!}</p>
 </div>
 
 <!-- Qrcode Owner Id Field -->
 <div class="form-group">
-    {!! Form::label('qrcode_owner_id', 'Qrcode Owner Id:') !!}
+    {!! Form::label('qrcode_owner_id', 'Qrcode Owner Name:') !!}
     <p>{!! $transaction->qrcode_owner_id !!}</p>
-</div>
-
-<!-- Qrcode Id Field -->
-<div class="form-group">
-    {!! Form::label('qrcode_id', 'Qrcode Id:') !!}
-    <p>{!! $transaction->qrcode_id !!}</p>
 </div>
 
 <!-- Payment Method Field -->

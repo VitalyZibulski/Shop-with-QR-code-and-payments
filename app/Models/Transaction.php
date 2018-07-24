@@ -66,5 +66,9 @@ class Transaction extends Model
         
     ];
 
+	public function qrcode()
+	{
+		return $this->belongsTo('App\Models\Qrcode');
+	}
     
 }
