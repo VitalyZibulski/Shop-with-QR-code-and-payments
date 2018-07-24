@@ -13,7 +13,6 @@
 ## Install
 
     $ git clone https://github.com/VitalyZibulski/Shop-with-QR-code-and-payments
-    $ cd laravel-shop
     $ npm install
 
 ## Start
