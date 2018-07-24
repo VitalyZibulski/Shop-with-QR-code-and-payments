@@ -9,7 +9,7 @@
 <!-- User Id Field -->
 <div class="form-group">
     {!! Form::label('user_id', 'Buyer Name:') !!}
-    <p>{!! $transaction->user_id !!}</p>
+    <p>{!! $transaction->user['name'] !!} | {!! $transaction->user['email'] !!}</p>
 </div>
 
 <!-- Qrcode Owner Id Field -->
