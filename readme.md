@@ -10,7 +10,7 @@
     You should be able to run the following command after the installation procedure
     below.
 
-## Install
+## Install (clone)
 
     $ git clone https://github.com/VitalyZibulski/Shop-with-QR-code-and-payments
     $ npm install
