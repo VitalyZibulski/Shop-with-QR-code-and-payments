@@ -22,11 +22,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'auth'], function() {
 	Route::resource('qrcodes', 'QrcodeController');
 
-	Route::resource('roles', 'RoleController');
-
 	Route::resource('transactions', 'TransactionController');
 
 	Route::resource('users', 'UserController');
 
-	Route::resource('users', 'UserController');
+	Route::resource('roles', 'RoleController')->middleware('checkadmin');
+
+	Route::group(['middleware'=>'checkmoderator'], function(){
+		Route::get('/users', 'UserController@index')->name('users.index');
+	});
+
 });
