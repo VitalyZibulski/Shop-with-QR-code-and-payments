@@ -1,15 +1,10 @@
 <table class="table table-responsive" id="accounts-table">
     <thead>
         <tr>
-        <th>User Id</th>
-        <th>Balance</th>
-        <th>Total Credit</th>
-        <th>Total Debit</th>
-        <th>Withdrawal Method</th>
-        <th>Applied For Payout</th>
-        <th>Paid</th>
-        <th>Last Date Applied</th>
-        <th>Last Date Paid</th>
+            <th>User</th>
+            <th>Balance</th>
+            <th>Total Credit</th>
+            <th>Total Debit</th>
             <th colspan="3">Action</th>
         </tr>
     </thead>
@@ -19,12 +14,7 @@
             <td>{!! $account->user_id !!}</td>
             <td>{!! $account->balance !!}</td>
             <td>{!! $account->total_credit !!}</td>
-            <td>{!! $account->total_debit !!}</td>
-            <td>{!! $account->withdrawal_method !!}</td>
-            <td>{!! $account->applied_for_payout !!}</td>
-            <td>{!! $account->paid !!}</td>
-            <td>{!! $account->last_date_applied !!}</td>
-            <td>{!! $account->last_date_paid !!}</td>
+            <td>{!! $account->total_debit !!}</td>s
             <td>
                 {!! Form::open(['route' => ['accounts.destroy', $account->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
