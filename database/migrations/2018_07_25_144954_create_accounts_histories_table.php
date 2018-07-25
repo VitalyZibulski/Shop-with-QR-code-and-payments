@@ -14,8 +14,12 @@ class CreateAccountsHistoriesTable extends Migration
     public function up()
     {
         Schema::create('accounts_histories', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+			$table->increments('id');
+			$table->integer('account_id');
+			$table->integer('user_id');
+			$table->longText('message');
+			$table->softDeletes();
+			$table->timestamps();
         });
     }
 
