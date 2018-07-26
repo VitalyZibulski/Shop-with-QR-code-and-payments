@@ -74,5 +74,10 @@ class User extends Model
 	{
 		return $this->hasMany('App\Models\Qrcode');
 	}
+
+	public function acoount_histories()
+	{
+		return $this->hasMany('App\Models\AccountHistory');
+	}
     
 }
