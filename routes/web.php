@@ -36,4 +36,7 @@ Route::group(['middleware' => 'auth'], function() {
 		Route::get('/users', 'UserController@index')->name('users.index');
 	});
 
+	Route::post('/accounts/apply_for_payout','AccountController@apply_for_payout')->name('accounts.apply_for_payout');
+	Route::post('/accounts/mark_as_paid','AccountController@mark_as_paid')->name('accounts.mark_as_paid');
+
 });
