@@ -12,9 +12,9 @@
     @foreach($accounts as $account)
         <tr>
             <td>{!! $account->user['email'] !!}</td>
-            <td>${!! $account->balance !!}</td>
-            <td>${!! $account->total_credit !!}</td>
-            <td>${!! $account->total_debit !!}</td>
+            <td>${!! number_format($account->balance) !!}</td>
+            <td>${!! number_format($account->total_credit) !!}</td>
+            <td>${!! number_format($account->total_debit) !!}</td>
             <td>
                 {!! Form::open(['route' => ['accounts.destroy', $account->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
