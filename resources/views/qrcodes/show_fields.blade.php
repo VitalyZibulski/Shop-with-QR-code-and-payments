@@ -26,7 +26,7 @@
     </p>
 </div>
 
-@if($qrcode->user_id == Auth::user()->id || Auth::user()->role_id < 3)
+@if(!Auth::guest() && ($qrcode->user_id == Auth::user()->id || Auth::user()->role_id < 3))
 
 <hr/>
 <!-- User Id Field -->
@@ -70,8 +70,8 @@
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{!! $qrcode->updated_at !!}</p>
 </div>
-</div>
 @endif
+</div>
 
 <div class="col-md-5 pull-right">
     <!-- Qrcode Path Field -->
@@ -82,7 +82,7 @@
         </p>
     </div>
 </div>
-@if($qrcode->user_id == Auth::user()->id || Auth::user()->role_id < 3)
+@if(!Auth::guest() && ($qrcode->user_id == Auth::user()->id || Auth::user()->role_id < 3))
     <div class="col-xs-12">
         <h3 class="text-center">Transactions done on this QRcode</h3>
         @include('transactions.table')
