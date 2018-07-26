@@ -32,10 +32,15 @@ class QrcodeController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $this->qrcodeRepository->pushCriteria(new RequestCriteria($request));
-        $qrcodes = $this->qrcodeRepository->all();
+		if(Auth::user()->role_id < 3) {
+			$this->qrcodeRepository->pushCriteria(new RequestCriteria($request));
+			$qrcodes = $this->qrcodeRepository->all();
+		}
+		else {
+				$qrcodes = QrcodeModel::where('user_id', Auth::user()->id)->get();
+			}
 
-        return view('qrcodes.index')
+        	return view('qrcodes.index')
             ->with('qrcodes', $qrcodes);
     }
 
