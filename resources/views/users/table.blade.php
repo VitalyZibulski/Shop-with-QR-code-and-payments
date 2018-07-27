@@ -2,11 +2,11 @@
     <thead>
         <tr>
             <th>Name</th>
-        <th>Email</th>
+            <th>Email</th>
+            <th>User level</th>
             @if(Auth::user()->role_id < 3)
                 <th colspan="3">Action</th>
             @endif
-            <th>User level</th>
         </tr>
     </thead>
     <tbody>

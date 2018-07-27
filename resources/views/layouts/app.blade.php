@@ -29,7 +29,7 @@
     @yield('css')
 </head>
 
-<body class="skin-yellow sidebar-mini">
+<body class="skin-blue sidebar-mini">
 @if (!Auth::guest())
     <div class="wrapper">
         <!-- Main Header -->
@@ -37,7 +37,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>Admin panel</b>
+                <b>Users panel</b>
             </a>
 
             <!-- Header Navbar -->
